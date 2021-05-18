@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="CinemaProject.Entry"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaProject"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="BackgroundImages/cinema1.jpg"></ImageBrush>
+        </Grid.Background>
+        <StackPanel Margin="0,100" VerticalAlignment="Center">
+            
+            <Button
+                Name="SignupButton"
+                Background="MidnightBlue"
+                BorderThickness="0"
+                Content="Sign Up"
+                Foreground="White"
+                Height="40"
+                Margin="250,20"
+                >
+            </Button>
+            <Button
+                Name="SigninButton"
+                Background="MidnightBlue"
+                BorderThickness="0"
+                Content="Sign In"
+                Foreground="White"
+                Height="40"
+                
+                Margin="250,20"
+                >
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

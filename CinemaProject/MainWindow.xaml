@@ -1,0 +1,126 @@
+﻿<Window x:Class="CinemaProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CinemaProject"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        WindowStartupLocation="CenterScreen" Height="500" Width="900" MinHeight="500" MaxHeight="500" MinWidth="900" MaxWidth="900">
+    <Grid>
+        <!--<local:SignIn></local:SignIn>-->
+        <!--<local:SignUp></local:SignUp>-->
+        <!--<local:Entry></local:Entry>-->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="9*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="200,0" Orientation="Horizontal">
+            <TextBox 
+                Name="searchTxtbox"
+                Style="{StaticResource Txtb}"
+                Width="400"></TextBox>
+            <Button
+                Name="searchBtn"
+                
+                Width="50"
+                >
+                <Button.Content>
+                    <Image Source="BackgroundImages/search.png"></Image>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="7*"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0"></Image>
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                    
+                    <Button Name="PrevBtn" Width="100" Margin="10,0" Background="MidnightBlue" Foreground="WhiteSmoke" FontFamily="Segoe UI" FontSize="20" FontWeight="SemiBold" Content="Previous">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
+                    <Button Name="NextBtn" Width="100" Margin="10,0" Background="MidnightBlue" Foreground="WhiteSmoke" FontFamily="Segoe UI" FontSize="20" FontWeight="SemiBold" Content="Next">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+                
+            </Grid>
+            
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0">
+                    <TextBlock
+                        Name="titleTxtblck"
+                        Style="{StaticResource Txtblock}">Title</TextBlock>
+                    <Label
+                        Name="titleLbl"
+                        Style="{StaticResource Lbl}"></Label>
+                </StackPanel>
+                <StackPanel Grid.Row="1">
+                    <TextBlock
+                        Name="yearTxtblck"
+                        Style="{StaticResource Txtblock}">Year</TextBlock>
+                    <Label
+                        Name="yearLbl"
+                        Style="{StaticResource Lbl}"></Label>
+                </StackPanel>
+                <StackPanel Grid.Row="2">
+                    <TextBlock
+                        Name="ratingTxtblck"
+                        Style="{StaticResource Txtblock}">IMDB</TextBlock>
+                    <Label
+                        Name="ratingLbl"
+                        Style="{StaticResource Lbl}"></Label>
+                </StackPanel>
+                <StackPanel Grid.Row="3">
+                    <TextBlock
+                        Name="topicTxtblck"
+                        Style="{StaticResource Txtblock}">Topic</TextBlock>
+                    <Label
+                        Name="topicLbl"
+                        Style="{StaticResource Lbl}"></Label>
+                </StackPanel>
+                <StackPanel Grid.Row="4">
+                    <TextBlock
+                        Name="castTxtblck"
+                        Style="{StaticResource Txtblock}">Cast</TextBlock>
+                    <Label
+                        Name="castLbl"
+                        Style="{StaticResource Lbl}"></Label>
+                </StackPanel>
+            </Grid>
+            
+        </Grid>
+        
+        
+        
+    </Grid>
+</Window>

@@ -1,0 +1,256 @@
+﻿<UserControl x:Class="CinemaProject.SignUp"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaProject"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="900" MinHeight="500" MaxHeight="500" MinWidth="900" MaxWidth="900">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <BitmapImage x:Key="Cinema1" UriSource="BackgroundImages/cinema1.jpg"></BitmapImage>
+            <BitmapImage x:Key="Cinema2" UriSource="BackgroundImages/cinema2.jpg"></BitmapImage>
+            <BitmapImage x:Key="Cinema3" UriSource="BackgroundImages/cinema3.jpg"></BitmapImage>
+            <BitmapImage x:Key="Cinema4" UriSource="BackgroundImages/cinema4.jpg"></BitmapImage>
+        </ResourceDictionary>
+
+    </UserControl.Resources>
+
+    <Grid Background="White">
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="450"></ColumnDefinition>
+            <ColumnDefinition Width="450"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel
+            Grid.Column="1"
+            Margin="51,10,49,10"
+            
+            >
+            <!--<Ellipse
+                Width="150" 
+                Height="100"
+                HorizontalAlignment="Center"
+                >
+                <Ellipse.Fill>
+                    <ImageBrush
+                        Stretch="UniformToFill"
+                        ImageSource="BackgroundImages/cinemaninja.png">
+                    </ImageBrush>
+                </Ellipse.Fill>
+            </Ellipse>-->
+
+            <!--sign up-->
+
+            <!--Email & password-->
+            <Border
+                Height="40"
+                BorderBrush="Silver"
+                BorderThickness="2"
+                CornerRadius="4"
+                Margin="0,0,0,20"
+                >
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        Width="25"
+                        Height="25"
+                        
+                        Source="BackgroundImages/usernamelogo.png"
+                        ></Image>
+                    <TextBox Name="nameTxtb" Background="Transparent" Grid.Column="1" Foreground="Silver" VerticalAlignment="Center" FontWeight="SemiBold" Text="Name" BorderThickness="0"></TextBox>
+                </Grid>
+            </Border>
+
+            <Border
+                Height="40"
+                BorderBrush="Silver"
+                BorderThickness="2"
+                CornerRadius="4"
+                Margin="0,0,0,20"
+                >
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        Width="25"
+                        Height="25"
+                    
+                        Source="BackgroundImages/usernamelogo.png"
+                        ></Image>
+                    <TextBox Name="surnameTxtb" Background="Transparent" Grid.Column="1" Foreground="Silver" VerticalAlignment="Center" FontWeight="SemiBold" Text="Surname" BorderThickness="0"></TextBox>
+                </Grid>
+            </Border>
+
+            <Border
+                Height="40"
+                BorderBrush="Silver"
+                BorderThickness="2"
+                CornerRadius="4"
+                Margin="0,0,0,20"
+                >
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        Width="25"
+                        Height="25"
+                    
+                        Source="BackgroundImages/usernamelogo.png"
+                        ></Image>
+                    <DatePicker Name="ageDtp" Background="Transparent" Grid.Column="1" Foreground="Silver" VerticalAlignment="Center" FontWeight="SemiBold" Text="Surname" BorderThickness="0"></DatePicker>
+                </Grid>
+            </Border>
+
+            <Border
+                Height="40"
+                BorderBrush="Silver"
+                BorderThickness="2"
+                CornerRadius="4"
+                Margin="0,0,0,20"
+                >
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        Width="25"
+                        Height="25"
+                        Source="BackgroundImages/emaillogo.jpg"
+                        ></Image>
+                    <TextBox Name="usernameTxtb" Background="Transparent" Grid.Column="1" Foreground="Silver" VerticalAlignment="Center" FontWeight="SemiBold" Text="Username" BorderThickness="0"></TextBox>
+                </Grid>
+            </Border>
+
+            <Border
+                Height="40"
+                BorderBrush="Silver"
+                BorderThickness="2"
+                CornerRadius="4"
+                Margin="0,0,0,20"
+                >
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        Width="25"
+                        Height="25"
+                        Source="BackgroundImages/emaillogo.jpg"
+                        ></Image>
+                    <TextBox Name="emailTxtb" Background="Transparent" Grid.Column="1" Foreground="Silver" VerticalAlignment="Center" FontWeight="SemiBold" Text="Email" BorderThickness="0"></TextBox>
+                </Grid>
+            </Border>
+
+            <!--Password-->
+            <Border
+                Height="40"
+                BorderBrush="Silver"
+                BorderThickness="2"
+                CornerRadius="4"
+                Margin="0,0,0,20"
+                >
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        Width="25"
+                        Height="25"
+                        Source="BackgroundImages/passwordlogo.png"
+                        ></Image>
+                    <PasswordBox Name="passwordTxtb" Background="Transparent" Grid.Column="1" Foreground="Silver" VerticalAlignment="Center" FontWeight="SemiBold" Password="Password" BorderThickness="0"></PasswordBox>
+                </Grid>
+            </Border>
+
+
+
+            <Button
+                Name="SignupBtn"
+                Background="MidnightBlue"
+                BorderThickness="0"
+                Content="Sign Up"
+                Foreground="White"
+                Height="40"
+                
+                Margin="0,0,0,20"
+                ></Button>
+        </StackPanel>
+
+
+
+        <!--<TextBlock Name="GobackTxtblock" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20"><Hyperlink TextDecorations="None" Click="Hyperlink_Click">Go back</Hyperlink></TextBlock>-->
+
+
+
+        <Image Stretch="UniformToFill"
+               Source="{StaticResource Cinema1}">
+
+
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetProperty="Opacity"
+                                SpeedRatio=".5"
+                                From="1"
+                                To=".5"
+                                RepeatBehavior="Forever"/>
+                            <DoubleAnimation
+                                Storyboard.TargetProperty="Opacity"
+                                SpeedRatio=".5"
+                                From=".5"
+                                To="1"
+                                RepeatBehavior="Forever"/>
+
+
+
+                            <ObjectAnimationUsingKeyFrames
+                                Storyboard.TargetProperty="Source"
+                                Duration="0:0:8"
+                                RepeatBehavior="Forever">
+                                <DiscreteObjectKeyFrame
+                                    Value="{StaticResource Cinema2}"
+                                    KeyTime="0:0:2">
+                                </DiscreteObjectKeyFrame>
+                                <DiscreteObjectKeyFrame
+                                    Value="{StaticResource Cinema3}"
+                                    KeyTime="0:0:4">
+                                </DiscreteObjectKeyFrame>
+                                <DiscreteObjectKeyFrame
+                                    Value="{StaticResource Cinema4}"
+                                    KeyTime="0:0:6">
+                                </DiscreteObjectKeyFrame>
+
+
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+
+        </Image>
+
+
+    </Grid>
+</UserControl>
